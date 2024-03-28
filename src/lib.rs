@@ -1,4 +1,4 @@
-mod iterator;
+// mod iterator;
 
 use pyo3::create_exception;
 use pyo3::exceptions::PyRuntimeError;
@@ -109,10 +109,10 @@ fn rocksdb3(_py: Python, m: &PyModule) -> PyResult<()> {
             }
         }
 
-        /// Opens an iterator using default options.
-        fn get_iter(&mut self) -> PyResult<iterator::RocksDBIterator> {
-            Ok(iterator::RocksDBIterator::new(self.db.clone()))
-        }
+        // /// Opens an iterator using default options.
+        // fn get_iter(&mut self) -> PyResult<iterator::RocksDBIterator> {
+        //     Ok(iterator::RocksDBIterator::new(self.db.clone()))
+        // }
 
         /// Tries to catch up with the primary by reading as much as possible from the log files.
         fn try_catch_up_with_primary(&mut self) -> PyResult<()> {

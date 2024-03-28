@@ -1,3 +1,4 @@
-Cargo.lock
-target
+/target
+/result
+/.direnv
 __pycache__/
